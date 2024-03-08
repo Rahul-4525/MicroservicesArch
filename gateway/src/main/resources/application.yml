@@ -1,0 +1,26 @@
+spring:
+  application:
+    name: Gateway
+  cloud:
+    gateway:
+      discovery:
+        locator:
+          enabled: true
+          lowerCaseServiceId: true
+#      routes:
+#        - id: AuthService
+#          uri: lb://AuthenticationService
+#          predicates:
+#            - Path=/auth/**
+#        - id: PaymentInit
+#          uri: lb://PaymentInitService
+#          predicates:
+#            - Path=/payment/**
+server:
+  port: 9600
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: ${EUREKA_URI:http://localhost:8761/eureka}
+  instance:
+    preferIpAddress: true
