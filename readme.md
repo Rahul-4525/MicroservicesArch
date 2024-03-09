@@ -1,3 +1,6 @@
+# Application Architecture
+![Architecture](https://github.com/Rahul-4525/MicroservicesArch/blob/master/Architecture.png?raw=true)
+
 ## Steps to invoke APIs
 ### For creating an user invoke this
 `curl --location 'http://localhost:9000/api/auth/addUser' \
