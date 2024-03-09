@@ -16,6 +16,14 @@
 ### For validating a token invoke this
 `curl --location 'http://localhost:9000/api/auth/validateToken/PASTE_TOKEN_HERE'`
 
+### create a merchant account with this below payload
+`curl --location 'http://localhost:9004/api/account/add' \
+--header 'Content-Type: application/json' \
+--data '{
+    "accountNumber":"35625",
+    "balance":"6"
+}'`
+
 ### For adding a billing account for customer/merchant
 `curl --location 'http://localhost:9004/api/account/add' \
 --header 'Content-Type: application/json' \
