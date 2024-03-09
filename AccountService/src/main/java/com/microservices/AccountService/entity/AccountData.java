@@ -1,17 +1,22 @@
 package com.microservices.AccountService.entity;
 
 import lombok.Data;
-import org.springframework.data.annotation.Id;
-import org.springframework.data.mongodb.core.mapping.Document;
-import org.springframework.data.mongodb.core.mapping.Field;
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import jakarta.persistence.Table;
 
-@Document("Accounts")
+@Entity
+@Table(name = "Accounts")
 @Data
 public class AccountData {
     @Id
-    private String id;
-    @Field("AccountNo")
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private Integer id;
+    @Column
     private String accountNumber;
-    @Field("balance")
+    @Column
     private Double balance;
 }

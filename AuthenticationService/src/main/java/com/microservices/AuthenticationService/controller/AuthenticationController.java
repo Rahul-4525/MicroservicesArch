@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.*;
 public class AuthenticationController {
     @Autowired
     private AccountService accountService;
+    @SuppressWarnings("rawtypes")
     @PostMapping("addUser")
     public ResponseEntity addAccount(@RequestBody Account account)
     {

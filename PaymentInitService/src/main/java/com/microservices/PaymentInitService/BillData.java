@@ -1,19 +1,24 @@
 package com.microservices.PaymentInitService;
 
 import lombok.Data;
-import org.springframework.data.annotation.Id;
-import org.springframework.data.mongodb.core.mapping.Document;
-import org.springframework.data.mongodb.core.mapping.Field;
+import jakarta.persistence.Id;
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Table;
 
-@Document("Bills")
+@Entity
+@Table(name = "Bills")
 @Data
 public class BillData {
     @Id
-    private String Id;
-    @Field("billNo")
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private Integer Id;
+    @Column
     private String billNumber;
-    @Field("amount")
+    @Column
     private Double billAmount;
-    @Field("accountNo")
+    @Column
     private String accountNumber;
 }

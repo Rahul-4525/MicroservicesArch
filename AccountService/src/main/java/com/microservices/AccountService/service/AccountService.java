@@ -1,5 +1,4 @@
 package com.microservices.AccountService.service;
-
 import com.microservices.AccountService.entity.AccountData;
 import com.microservices.AccountService.repo.AccountRepo;
 import org.springframework.beans.factory.annotation.Autowired;

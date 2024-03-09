@@ -1,12 +1,9 @@
 package com.microservices.PaymentProcessingService.service;
 
-import com.microservices.PaymentProcessingService.dto.AccountData;
-import org.springframework.cloud.openfeign.EnableFeignClients;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
 
 @FeignClient("Gateway")
 public interface OpenFeign {
