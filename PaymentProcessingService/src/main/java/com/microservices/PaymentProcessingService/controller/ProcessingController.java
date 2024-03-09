@@ -37,6 +37,7 @@ public class ProcessingController {
         }
         return ResponseEntity.ok().body("Payment is processed.");
     }
+    //circuit breaker
     ResponseEntity<String> processPaymentFallback(Throwable ex)
     {
         return ResponseEntity.internalServerError().body("Unable to process the payments now");

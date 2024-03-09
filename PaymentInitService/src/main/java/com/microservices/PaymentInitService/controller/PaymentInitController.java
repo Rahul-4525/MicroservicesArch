@@ -36,7 +36,7 @@ public class PaymentInitController {
         }
         return ResponseEntity.ok().body("Payment Success");
     }
-
+    //circuit breaker
     public ResponseEntity<String> handleInitPayment(Exception ex) {
         return ResponseEntity.internalServerError().body("Currently experiencing high number of requests, please try after some time");
     }
