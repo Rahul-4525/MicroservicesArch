@@ -2,7 +2,7 @@ spring:
   application:
     name: PaymentProcessing
 server:
-  port: 9007
+  port: 9005
   servlet:
     context-path: /api/process
 eureka:

@@ -1,0 +1,7 @@
+FROM maven:3.8.3-openjdk-17
+WORKDIR /DiscoveryServiceDir
+COPY ./discovery/pom.xml .
+COPY ./discovery/src ./src
+RUN mvn clean package -DskipTests
+EXPOSE 8761
+CMD [ "java","-jar", "target/discovery-0.0.1-SNAPSHOT.jar"]

@@ -13,7 +13,7 @@ spring:
 #          starttls:
 #            enable:true
 server:
-  port: 9005
+  port: 9003
   servlet:
     context-path: /api/notify
 eureka:

@@ -6,7 +6,7 @@ spring:
   application:
     name: PaymentInitService
 server:
-  port: 9001
+  port: 9004
   servlet:
     context-path: /api/payments
 eureka:

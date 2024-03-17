@@ -1,11 +1,7 @@
-FROM eclipse-temurin:17-jdk-focal
-
-WORKDIR /app
-
-COPY .mvn/ .mvn
-COPY mvnw pom.xml ./
-RUN ./mvnw dependency:go-offline
-
-COPY src ./src
-
-CMD ["./mvnw", "spring-boot:run"]
+FROM maven:3.8.3-openjdk-17
+WORKDIR /PaymentInitServiceDir
+COPY ./PaymentInitService/pom.xml .
+COPY ./PaymentInitService/src ./src
+RUN mvn clean package -DskipTests
+EXPOSE 9004
+CMD [ "java","-jar", "target/PaymentInitService-0.0.1-SNAPSHOT.jar"]

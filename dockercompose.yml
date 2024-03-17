@@ -1,0 +1,39 @@
+version: '3.8'
+
+services:
+
+  Discovery:
+    container_name: "Discovery_Service"
+    image: docker.io/eureka/discovery_service:latest
+    ports:
+      - "9600:8761"
+  AccountService:
+    container_name: "Account_service"
+    image: docker.io/eureka/account_service:latest
+    ports:
+      - "9601:9000"
+  Gateway:
+    container_name: "Gateway_Service"
+    image: docker.io/eureka/gateway_service:latest
+    ports:
+      - "9602:9001"
+  AuthenticationService:
+    container_name: "Authentication_Service"
+    image: docker.io/eureka/authentication_service:latest
+    ports:
+      - "9603:9002"
+  Notification:
+    container_name: "Notification_Service"
+    image: docker.io/eureka/notification_service:latest
+    ports:
+      - "9604:9003"
+  PaymentInitService:
+    container_name: "PaymentInit_Service"
+    image: docker.io/eureka/payment_init_service:latest
+    ports:
+      - "9605:9004"
+  PaymentProcessingService:
+    container_name: "PaymentProcessing_Service"
+    image: docker.io/eureka/payment_process_service:latest
+    ports:
+      - "9606:9005"
